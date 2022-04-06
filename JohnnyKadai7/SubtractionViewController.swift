@@ -7,23 +7,18 @@
 
 import UIKit
 
-class SubtractionViewController: UIViewController {
+final class SubtractionViewController: UIViewController {
+    @IBOutlet private weak var firstTextField: UITextField!
+
+    @IBOutlet private weak var secondTextField: UITextField!
+
+    @IBAction private func executeCalculation(_ sender: Any) {
+
+    }
+
+    @IBOutlet private weak var resultLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

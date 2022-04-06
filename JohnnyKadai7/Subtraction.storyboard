@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="smN-1q-J1E">
-                                <rect key="frame" x="16" y="60" width="382" height="209.5"/>
+                                <rect key="frame" x="16" y="60" width="382" height="213"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="43L-uc-Wz5" userLabel="First TextField">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="34"/>
@@ -28,13 +28,18 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIK-it-ai5">
-                                        <rect key="frame" x="0.0" y="128" width="382" height="31"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIK-it-ai5" userLabel="Execute Calculation Button">
+                                        <rect key="frame" x="0.0" y="128" width="382" height="34.5"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Execute calculation">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="executeCalculation:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7sn-E1-fB6"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AoD-lY-nup">
-                                        <rect key="frame" x="0.0" y="189" width="382" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="192.5" width="382" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -53,6 +58,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Ta3-50-15i"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="firstTextField" destination="43L-uc-Wz5" id="Igi-4o-WTv"/>
+                        <outlet property="resultLabel" destination="AoD-lY-nup" id="ysf-mx-xWn"/>
+                        <outlet property="secondTextField" destination="tFQ-Iv-lRg" id="TWC-CV-hS9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
