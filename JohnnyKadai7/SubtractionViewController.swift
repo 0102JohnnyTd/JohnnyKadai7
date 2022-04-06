@@ -13,7 +13,6 @@ final class SubtractionViewController: UIViewController {
     @IBOutlet private weak var secondTextField: UITextField!
 
     @IBAction private func executeCalculation(_ sender: Any) {
-
     }
 
     @IBOutlet private weak var resultLabel: UILabel!
