@@ -17,7 +17,15 @@ final class SubtractionViewController: UIViewController {
 
     @IBOutlet private weak var resultLabel: UILabel!
 
+    private var textfields: [UITextField] {
+        [firstTextField,secondTextField]
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpKeyboard()
+    }
+    private func setUpKeyboard() {
+        textfields.forEach{ $0.keyboardType = .numberPad }
     }
 }
