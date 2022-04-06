@@ -14,6 +14,7 @@ final class AdditionViewController: UIViewController {
 
     @IBAction private func executeCalculation(_ sender: Any) {
         additionValue()
+        view.endEditing(true)
     }
 
     @IBOutlet private weak var resultLabel: UILabel!
