@@ -7,23 +7,60 @@
 
 import UIKit
 
-class AdditionViewController: UIViewController {
+final class AdditionViewController: UIViewController {
+    @IBOutlet private weak var firstTextField: UITextField!
+
+    @IBOutlet private weak var secondTextField: UITextField!
+
+    @IBAction private func executeCalculation(_ sender: Any) {
+        additionValue()
+    }
+
+    @IBOutlet private weak var resultLabel: UILabel!
+
+    private var textFields: [UITextField] {
+        [firstTextField,secondTextField]
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUpKeyboard()
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setUpKeyboard() {
+        textFields.forEach { $0.keyboardType = .numberPad }
     }
-    */
 
+    private func additionValue() {
+        do {
+            let values = textFields.map{ $0.textToInt }
+            let sum = try values.reduce(0) { try $0.addingReportingOverflowWithError($1) }
+            resultLabel.text = sum.description
+        } catch {
+            switch error {
+            case is OverflowError:
+                resultLabel.text = "値が大きすぎるため扱うことができません"
+            default:
+                resultLabel.text = "不明のエラーです"
+            }
+        }
+    }
+}
+
+extension UITextField {
+    var textToInt: Int {
+       text.flatMap { Int($0) } ?? 0
+    }
+}
+
+struct OverflowError: Error {}
+
+private extension Int {
+    func addingReportingOverflowWithError(_ other: Int) throws -> Int {
+        let result = addingReportingOverflow(other)
+        guard !result.overflow else {
+           throw OverflowError()
+        }
+        return result.partialValue
+    }
 }
