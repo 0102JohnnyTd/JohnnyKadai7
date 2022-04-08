@@ -17,6 +17,8 @@
 		1C6BA1E727FBAB8A00037C4F /* Subtraction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C6BA1E627FBAB8A00037C4F /* Subtraction.storyboard */; };
 		1C6BA1E927FBAC0100037C4F /* AdditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6BA1E827FBAC0100037C4F /* AdditionViewController.swift */; };
 		1C6BA1EB27FBAC1100037C4F /* SubtractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6BA1EA27FBAC1100037C4F /* SubtractionViewController.swift */; };
+		1C6BA1F9280063AF00037C4F /* OverflowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6BA1F8280063AF00037C4F /* OverflowError.swift */; };
+		1C6BA1FB280063BA00037C4F /* UnderflowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6BA1FA280063B900037C4F /* UnderflowError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		1C6BA1E627FBAB8A00037C4F /* Subtraction.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Subtraction.storyboard; sourceTree = "<group>"; };
 		1C6BA1E827FBAC0100037C4F /* AdditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionViewController.swift; sourceTree = "<group>"; };
 		1C6BA1EA27FBAC1100037C4F /* SubtractionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtractionViewController.swift; sourceTree = "<group>"; };
+		1C6BA1F8280063AF00037C4F /* OverflowError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverflowError.swift; sourceTree = "<group>"; };
+		1C6BA1FA280063B900037C4F /* UnderflowError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderflowError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 			children = (
 				1C6BA1D027FBA87200037C4F /* AppDelegate.swift */,
 				1C6BA1D227FBA87200037C4F /* SceneDelegate.swift */,
+				1C6BA1FC280063D600037C4F /* Error */,
 				1C6BA1D427FBA87200037C4F /* ViewController.swift */,
 				1C6BA1D627FBA87200037C4F /* Main.storyboard */,
 				1C6BA1E427FBAB7800037C4F /* Addition.storyboard */,
@@ -77,6 +82,15 @@
 				1C6BA1DE27FBA87800037C4F /* Info.plist */,
 			);
 			path = JohnnyKadai7;
+			sourceTree = "<group>";
+		};
+		1C6BA1FC280063D600037C4F /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				1C6BA1F8280063AF00037C4F /* OverflowError.swift */,
+				1C6BA1FA280063B900037C4F /* UnderflowError.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,9 +168,11 @@
 			files = (
 				1C6BA1D527FBA87200037C4F /* ViewController.swift in Sources */,
 				1C6BA1D127FBA87200037C4F /* AppDelegate.swift in Sources */,
+				1C6BA1F9280063AF00037C4F /* OverflowError.swift in Sources */,
 				1C6BA1E927FBAC0100037C4F /* AdditionViewController.swift in Sources */,
 				1C6BA1EB27FBAC1100037C4F /* SubtractionViewController.swift in Sources */,
 				1C6BA1D327FBA87200037C4F /* SceneDelegate.swift in Sources */,
+				1C6BA1FB280063BA00037C4F /* UnderflowError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
