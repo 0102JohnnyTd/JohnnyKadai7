@@ -20,7 +20,7 @@ final class SubtractionViewController: UIViewController {
     @IBOutlet private weak var resultLabel: UILabel!
 
     private var textfields: [UITextField] {
-        [firstTextField,secondTextField]
+        [firstTextField, secondTextField]
     }
 
     override func viewDidLoad() {
@@ -29,7 +29,7 @@ final class SubtractionViewController: UIViewController {
     }
 
     private func setUpKeyboard() {
-        textfields.forEach{ $0.keyboardType = .numberPad }
+        textfields.forEach { $0.keyboardType = .numberPad }
     }
 
     private func reportingUnderflowWithError(_ result: Int) throws -> Int {

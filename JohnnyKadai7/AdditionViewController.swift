@@ -20,7 +20,7 @@ final class AdditionViewController: UIViewController {
     @IBOutlet private weak var resultLabel: UILabel!
 
     private var textFields: [UITextField] {
-        [firstTextField,secondTextField]
+        [firstTextField, secondTextField]
     }
 
     override func viewDidLoad() {
@@ -34,7 +34,7 @@ final class AdditionViewController: UIViewController {
 
     private func fetchAdditionResult() {
         do {
-            let values = textFields.map{ $0.textToInt }
+            let values = textFields.map { $0.textToInt }
             let result = try values.reduce(0) { try $0.addingReportingOverflowWithError($1) }
             resultLabel.text = result.description
         } catch {
