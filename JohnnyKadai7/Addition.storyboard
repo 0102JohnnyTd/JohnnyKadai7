@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Addition-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="AdditionViewController" customModule="JohnnyKadai7" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,7 +31,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOM-5y-U4M" userLabel="Calculation  Button">
                                         <rect key="frame" x="0.0" y="128" width="382" height="34.5"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Execute Calculation">
+                                        <buttonConfiguration key="configuration" style="plain" title="Execute calculation">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -56,7 +56,7 @@
                             <constraint firstItem="7ec-Qs-fyX" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" priority="249" constant="16" id="gak-xE-shn"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="96s-i4-nFh"/>
+                    <tabBarItem key="tabBarItem" title="Addition" id="96s-i4-nFh"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="firstTextField" destination="uNL-WO-OJF" id="H4Q-7n-obw"/>
