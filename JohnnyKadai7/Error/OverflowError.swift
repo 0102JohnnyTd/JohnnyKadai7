@@ -8,3 +8,5 @@
 import Foundation
 
 struct OverflowError: Error {}
+
+enum 

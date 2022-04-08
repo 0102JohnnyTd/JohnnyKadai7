@@ -7,6 +7,11 @@
 
 import UIKit
 
+private enum UnderflowErrorMessage {
+    static let valueIsTooSmall = "値が大きすぎるため扱うことができません"
+    static let unknownError = "不明のエラーです"
+}
+
 final class SubtractionViewController: UIViewController {
     @IBOutlet private weak var firstTextField: UITextField!
 
@@ -47,9 +52,9 @@ final class SubtractionViewController: UIViewController {
         } catch {
             switch error {
             case is UnderflowError:
-                resultLabel.text = "値が小さすぎるため扱うことができません"
+                resultLabel.text = UnderflowErrorMessage.valueIsTooSmall
             default:
-                resultLabel.text = "不明のエラーです"
+                resultLabel.text = UnderflowErrorMessage.unknownError
             }
         }
     }

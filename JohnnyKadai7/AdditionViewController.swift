@@ -7,6 +7,11 @@
 
 import UIKit
 
+private enum OverflowErrorMessage {
+    static let valueIsTooLarge = "値が大きすぎるため扱うことができません"
+    static let unknownError = "不明のエラーです"
+}
+
 final class AdditionViewController: UIViewController {
     @IBOutlet private weak var firstTextField: UITextField!
 
@@ -40,9 +45,9 @@ final class AdditionViewController: UIViewController {
         } catch {
             switch error {
             case is OverflowError:
-                resultLabel.text = "値が大きすぎるため扱うことができません"
+                resultLabel.text = OverflowErrorMessage.valueIsTooLarge
             default:
-                resultLabel.text = "不明のエラーです"
+                resultLabel.text = OverflowErrorMessage.unknownError
             }
         }
     }
