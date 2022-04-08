@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Subtraction-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="SubtractionViewController" customModule="JohnnyKadai7" customModuleProvider="target" sceneMemberID="viewController">
@@ -56,7 +56,7 @@
                             <constraint firstItem="smN-1q-J1E" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="rGg-Lr-sm3"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Ta3-50-15i"/>
+                    <tabBarItem key="tabBarItem" title="Subtraction" id="Ta3-50-15i"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="firstTextField" destination="43L-uc-Wz5" id="Igi-4o-WTv"/>
