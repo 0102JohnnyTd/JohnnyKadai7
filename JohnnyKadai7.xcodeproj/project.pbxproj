@@ -19,6 +19,7 @@
 		1C6BA1EB27FBAC1100037C4F /* SubtractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6BA1EA27FBAC1100037C4F /* SubtractionViewController.swift */; };
 		1C6BA1F9280063AF00037C4F /* OverflowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6BA1F8280063AF00037C4F /* OverflowError.swift */; };
 		1C6BA1FB280063BA00037C4F /* UnderflowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6BA1FA280063B900037C4F /* UnderflowError.swift */; };
+		1CBAB48F2805D6850049BB24 /* UITextField +.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBAB48E2805D6850049BB24 /* UITextField +.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		1C6BA1EA27FBAC1100037C4F /* SubtractionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtractionViewController.swift; sourceTree = "<group>"; };
 		1C6BA1F8280063AF00037C4F /* OverflowError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverflowError.swift; sourceTree = "<group>"; };
 		1C6BA1FA280063B900037C4F /* UnderflowError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderflowError.swift; sourceTree = "<group>"; };
+		1CBAB48E2805D6850049BB24 /* UITextField +.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField +.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			children = (
 				1C6BA1D027FBA87200037C4F /* AppDelegate.swift */,
 				1C6BA1D227FBA87200037C4F /* SceneDelegate.swift */,
+				1CBAB4902805D7180049BB24 /* Extension */,
 				1C6BA1FC280063D600037C4F /* Error */,
 				1C6BA1D427FBA87200037C4F /* ViewController.swift */,
 				1C6BA1D627FBA87200037C4F /* Main.storyboard */,
@@ -91,6 +94,14 @@
 				1C6BA1FA280063B900037C4F /* UnderflowError.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		1CBAB4902805D7180049BB24 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1CBAB48E2805D6850049BB24 /* UITextField +.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CBAB48F2805D6850049BB24 /* UITextField +.swift in Sources */,
 				1C6BA1D527FBA87200037C4F /* ViewController.swift in Sources */,
 				1C6BA1D127FBA87200037C4F /* AppDelegate.swift in Sources */,
 				1C6BA1F9280063AF00037C4F /* OverflowError.swift in Sources */,

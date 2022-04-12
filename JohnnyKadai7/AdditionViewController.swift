@@ -18,7 +18,7 @@ final class AdditionViewController: UIViewController {
     @IBOutlet private weak var secondTextField: UITextField!
 
     @IBAction private func executeCalculation(_ sender: Any) {
-        fetchAdditionResult()
+        calculateAdditionResult()
         view.endEditing(true)
     }
 
@@ -37,29 +37,20 @@ final class AdditionViewController: UIViewController {
         textFields.forEach { $0.keyboardType = .numberPad }
     }
 
-    private func fetchAdditionResult() {
+    private func calculateAdditionResult() {
         do {
             let values = textFields.map { $0.textToInt }
             let result = try values.reduce(0) { try $0.addingReportingOverflowWithError($1) }
             resultLabel.text = result.description
+        } catch is OverflowError {
+            resultLabel.text = OverflowErrorMessage.valueIsTooLarge
         } catch {
-            switch error {
-            case is OverflowError:
-                resultLabel.text = OverflowErrorMessage.valueIsTooLarge
-            default:
-                resultLabel.text = OverflowErrorMessage.unknownError
-            }
+            resultLabel.text = OverflowErrorMessage.unknownError
         }
     }
 }
 
-extension UITextField {
-    var textToInt: Int {
-       text.flatMap { Int($0) } ?? 0
-    }
-}
-
-extension Int {
+private extension Int {
     func addingReportingOverflowWithError(_ other: Int) throws -> Int {
         let result = addingReportingOverflow(other)
         guard !result.overflow else {

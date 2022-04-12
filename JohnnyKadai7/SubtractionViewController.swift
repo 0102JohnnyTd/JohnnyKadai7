@@ -18,7 +18,7 @@ final class SubtractionViewController: UIViewController {
     @IBOutlet private weak var secondTextField: UITextField!
 
     @IBAction private func executeCalculation(_ sender: Any) {
-        fetchSubtractionResult()
+        calculateSubtractionResult()
         view.endEditing(true)
     }
 
@@ -44,18 +44,15 @@ final class SubtractionViewController: UIViewController {
         return result
     }
 
-    private func fetchSubtractionResult() {
+    private func calculateSubtractionResult() {
         do {
             let values = textfields.map { $0.textToInt }
             let result = try reportingUnderflowWithError(values[0] - values[1])
             resultLabel.text = result.description
-        } catch {
-            switch error {
-            case is UnderflowError:
+        } catch is UnderflowError {
                 resultLabel.text = UnderflowErrorMessage.valueIsTooSmall
-            default:
+        } catch {
                 resultLabel.text = UnderflowErrorMessage.unknownError
             }
         }
-    }
 }
