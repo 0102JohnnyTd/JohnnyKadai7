@@ -59,9 +59,9 @@
                     <tabBarItem key="tabBarItem" title="Subtraction" id="Ta3-50-15i"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="firstTextField" destination="43L-uc-Wz5" id="Igi-4o-WTv"/>
                         <outlet property="resultLabel" destination="AoD-lY-nup" id="ysf-mx-xWn"/>
-                        <outlet property="secondTextField" destination="tFQ-Iv-lRg" id="TWC-CV-hS9"/>
+                        <outletCollection property="valueTextFields" destination="43L-uc-Wz5" collectionClass="NSMutableArray" id="o9F-fq-0KJ"/>
+                        <outletCollection property="valueTextFields" destination="tFQ-Iv-lRg" collectionClass="NSMutableArray" id="zx4-PK-Qbc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

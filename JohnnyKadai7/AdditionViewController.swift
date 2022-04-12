@@ -13,9 +13,7 @@ private enum OverflowErrorMessage {
 }
 
 final class AdditionViewController: UIViewController {
-    @IBOutlet private weak var firstTextField: UITextField!
-
-    @IBOutlet private weak var secondTextField: UITextField!
+    @IBOutlet private var valueTextFields: [UITextField] = []
 
     @IBAction private func executeCalculation(_ sender: Any) {
         calculateAdditionResult()
@@ -24,22 +22,18 @@ final class AdditionViewController: UIViewController {
 
     @IBOutlet private weak var resultLabel: UILabel!
 
-    private var textFields: [UITextField] {
-        [firstTextField, secondTextField]
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpKeyboard()
     }
 
     private func setUpKeyboard() {
-        textFields.forEach { $0.keyboardType = .numberPad }
+         valueTextFields.forEach { $0.keyboardType = .numberPad }
     }
 
     private func calculateAdditionResult() {
         do {
-            let values = textFields.map { $0.textToInt }
+            let values = valueTextFields.map { $0.textToInt }
             let result = try values.reduce(0) { try $0.addingReportingOverflowWithError($1) }
             resultLabel.text = result.description
         } catch is OverflowError {

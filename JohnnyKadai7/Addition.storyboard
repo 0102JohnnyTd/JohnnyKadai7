@@ -59,9 +59,9 @@
                     <tabBarItem key="tabBarItem" title="Addition" id="96s-i4-nFh"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="firstTextField" destination="uNL-WO-OJF" id="H4Q-7n-obw"/>
                         <outlet property="resultLabel" destination="CeA-cP-dUp" id="OQN-y2-mlf"/>
-                        <outlet property="secondTextField" destination="pm1-Cr-Hy7" id="6hK-hU-GdA"/>
+                        <outletCollection property="valueTextFields" destination="uNL-WO-OJF" collectionClass="NSMutableArray" id="Xxn-yU-27c"/>
+                        <outletCollection property="valueTextFields" destination="pm1-Cr-Hy7" collectionClass="NSMutableArray" id="2pf-1b-V9H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

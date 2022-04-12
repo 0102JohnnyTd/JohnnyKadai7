@@ -13,9 +13,7 @@ private enum UnderflowErrorMessage {
 }
 
 final class SubtractionViewController: UIViewController {
-    @IBOutlet private weak var firstTextField: UITextField!
-
-    @IBOutlet private weak var secondTextField: UITextField!
+    @IBOutlet private var valueTextFields: [UITextField] = []
 
     @IBAction private func executeCalculation(_ sender: Any) {
         calculateSubtractionResult()
@@ -24,17 +22,13 @@ final class SubtractionViewController: UIViewController {
 
     @IBOutlet private weak var resultLabel: UILabel!
 
-    private var textfields: [UITextField] {
-        [firstTextField, secondTextField]
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpKeyboard()
     }
 
     private func setUpKeyboard() {
-        textfields.forEach { $0.keyboardType = .numberPad }
+        valueTextFields.forEach { $0.keyboardType = .numberPad }
     }
 
     private func reportingUnderflowWithError(_ result: Int) throws -> Int {
@@ -46,7 +40,7 @@ final class SubtractionViewController: UIViewController {
 
     private func calculateSubtractionResult() {
         do {
-            let values = textfields.map { $0.textToInt }
+            let values = valueTextFields.map { $0.textToInt }
             let result = try reportingUnderflowWithError(values[0] - values[1])
             resultLabel.text = result.description
         } catch is UnderflowError {
